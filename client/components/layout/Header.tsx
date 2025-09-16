@@ -12,9 +12,7 @@ export default function Header() {
           <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 text-primary">
             <Leaf className="h-5 w-5" />
           </span>
-          <span className="text-lg font-bold tracking-tight">
-            AyurSutra
-          </span>
+          <span className="text-lg font-bold tracking-tight">AyurSutra</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           <NavItem to="/" label="Home" active={location.pathname === "/"} />
@@ -40,7 +38,15 @@ export default function Header() {
   );
 }
 
-function NavItem({ to, label, active }: { to: string; label: string; active?: boolean }) {
+function NavItem({
+  to,
+  label,
+  active,
+}: {
+  to: string;
+  label: string;
+  active?: boolean;
+}) {
   return (
     <NavLink
       to={to}

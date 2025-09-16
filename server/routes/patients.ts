@@ -16,7 +16,8 @@ export const getPatient: RequestHandler = (req, res) => {
 
 export const createPatient: RequestHandler = (req, res) => {
   const parsed = PatientSchema.safeParse(req.body);
-  if (!parsed.success) return res.status(400).json({ error: parsed.error.flatten() });
+  if (!parsed.success)
+    return res.status(400).json({ error: parsed.error.flatten() });
   const { id, createdAt, updatedAt, ...data } = parsed.data;
   const saved = upsertPatient(data as any);
   res.status(201).json(saved);
@@ -25,7 +26,8 @@ export const createPatient: RequestHandler = (req, res) => {
 export const updatePatient: RequestHandler = (req, res) => {
   const { id } = req.params;
   const parsed = PatientSchema.partial().safeParse({ ...req.body, id });
-  if (!parsed.success) return res.status(400).json({ error: parsed.error.flatten() });
+  if (!parsed.success)
+    return res.status(400).json({ error: parsed.error.flatten() });
   const existing = db.patients.get(id);
   if (!existing) return res.status(404).json({ error: "Patient not found" });
   const saved = upsertPatient({ ...existing, ...parsed.data, id } as any);
