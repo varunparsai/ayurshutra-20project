@@ -6,9 +6,8 @@ export default function Footer() {
           © {new Date().getFullYear()} AyurSutra · Panchakarma care, modernized.
         </p>
         <div className="flex items-center gap-6 text-sm text-muted-foreground">
+          <a href="/" className="hover:text-foreground">Home</a>
           <a href="#features" className="hover:text-foreground">Features</a>
-          <a href="#security" className="hover:text-foreground">Security</a>
-          <a href="#contact" className="hover:text-foreground">Contact</a>
         </div>
       </div>
     </footer>
