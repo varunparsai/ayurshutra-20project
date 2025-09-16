@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AyurSutra — Panchakarma Patient Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/ayursutra.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+        <span class="logo">AS</span>
+        <span class="brand-name">AyurSutra</span>
+      </a>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#interaction">Doctor–Patient</a>
+        <a href="#therapies">Therapies</a>
+        <a href="#appointments">Appointments</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container grid-2">
+        <div class="hero-copy">
+          <p class="chip">Panchakarma clinic toolkit</p>
+          <h1>AyurSutra — Panchakarma<br/>Patient Management and<br/>therapy scheduling Software</h1>
+          <p class="sub">A serene, modern interface for patient records, therapy details, and appointment planning — in pure HTML and CSS.</p>
+          <div class="cta">
+            <a class="btn primary" href="#appointments">Book an Appointment</a>
+            <a class="btn ghost" href="#therapies">Explore Therapies</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="card">
+            <div class="card-head">
+              <h3>Today at a glance</h3>
+              <p class="muted">Static preview</p>
+            </div>
+            <div class="stats">
+              <div class="stat"><span class="label">Appointments</span><span class="value">12</span><span class="delta up">+3</span></div>
+              <div class="stat"><span class="label">Active Therapies</span><span class="value">8</span><span class="delta up">+1</span></div>
+              <div class="stat"><span class="label">New Patients</span><span class="value">4</span><span class="delta up">+2</span></div>
+            </div>
+            <div class="inline-cards">
+              <div class="mini">
+                <div class="mini-label">Next session</div>
+                <div class="mini-value">Abhyanga · 11:30 AM</div>
+                <div class="mini-note muted">Room A · Therapist Meera</div>
+              </div>
+              <div class="mini">
+                <div class="mini-label">Low availability</div>
+                <div class="mini-value">Shirodhara beds · 1 left</div>
+                <div class="mini-note muted">Today 2–5 PM peak</div>
+              </div>
+            </div>
+            <div class="tip">Tip: Build dosha-based therapy templates for consistency.</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-bubble a"></div>
+      <div class="bg-bubble b"></div>
+    </section>
+
+    <section id="interaction" class="section">
+      <div class="container">
+        <h2>Doctor–Patient Interaction</h2>
+        <p class="section-sub">A simple, calming space for notes and recommendations.</p>
+        <div class="grid-3 cards">
+          <article class="card">
+            <h3 class="card-title">Patient Summary</h3>
+            <p class="muted">Name: Arjun Sharma<br/>Prakriti: Vata-Pitta<br/>Allergies: None</p>
+          </article>
+          <article class="card">
+            <h3 class="card-title">Consultation Notes</h3>
+            <p class="muted">Primary concerns: stress, insomnia. Recommended daily Abhyanga with sesame oil, light sattvic diet.</p>
+          </article>
+          <article class="card">
+            <h3 class="card-title">Follow-up</h3>
+            <p class="muted">Check sleep quality in 7 days. Consider Shirodhara if insomnia persists.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="therapies" class="section">
+      <div class="container">
+        <h2>Panchakarma Therapies</h2>
+        <p class="section-sub">Core procedures with brief descriptions.</p>
+        <div class="grid-4 cards">
+          <article class="card">
+            <h3 class="card-title">Vamana</h3>
+            <p class="muted">Therapeutic emesis to eliminate Kapha toxins.</p>
+          </article>
+          <article class="card">
+            <h3 class="card-title">Virechana</h3>
+            <p class="muted">Pitta cleansing via controlled purgation.</p>
+          </article>
+          <article class="card">
+            <h3 class="card-title">Basti</h3>
+            <p class="muted">Medicated enemas balancing Vata dosha.</p>
+          </article>
+          <article class="card">
+            <h3 class="card-title">Nasya</h3>
+            <p class="muted">Nasal herbal oils for head and neck ailments.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="appointments" class="section">
+      <div class="container">
+        <h2>Appointment Slots (static)</h2>
+        <p class="section-sub">Select a time to request booking (no JavaScript/database).</p>
+        <div class="slots">
+          <div class="slot-row">
+            <div class="slot-head">Morning</div>
+            <a class="slot">09:00</a>
+            <a class="slot">09:30</a>
+            <a class="slot busy" aria-disabled="true">10:00</a>
+            <a class="slot">10:30</a>
+            <a class="slot">11:00</a>
+          </div>
+          <div class="slot-row">
+            <div class="slot-head">Afternoon</div>
+            <a class="slot">12:00</a>
+            <a class="slot">12:30</a>
+            <a class="slot">13:00</a>
+            <a class="slot busy" aria-disabled="true">13:30</a>
+            <a class="slot">14:00</a>
+          </div>
+          <div class="slot-row">
+            <div class="slot-head">Evening</div>
+            <a class="slot">16:00</a>
+            <a class="slot">16:30</a>
+            <a class="slot">17:00</a>
+            <a class="slot">17:30</a>
+            <a class="slot">18:00</a>
+          </div>
+        </div>
+        <p class="muted small">Note: This is a static HTML/CSS prototype — no interactive booking.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> AyurSutra · Panchakarma care, simplified.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#therapies">Therapies</a>
+        <a href="#appointments">Appointments</a>
+      </div>
+    </div>
+  </footer>
+  <!-- No JavaScript per request; year can be static -->
+</body>
+</html>
